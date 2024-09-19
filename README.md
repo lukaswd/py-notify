@@ -1,27 +1,27 @@
 # py-notify
 
-Simple python program that notifies the user via Telegram when a command execution is finished. All you need to do is to append the python script to the dessired linux command via a linux pipe.
+A simple python program that notifies the user via Telegram when a command execution is finished. All you need to do is to append the python script to the desired Linux command via a Linux pipe.
 
 Example:
 ```
 $ command | python3 py-notify/main.py
 ```
 
-Howerver we need to setup our Telegram bot beforehand. 
+However, we need to set up our Telegram bot beforehand. 
 
 ## Setup
-1. If you do not already have a Telegram bot, you need to setup your own bot via [BotFather](https://t.me/botfather).
+1. If you do not already have a Telegram bot, you need to set up your own bot via [BotFather](https://t.me/botfather).
 
-2. Now we need to safe the bot token and the desired chat id in the [config file](./config.json). 
+2. Now we need to save the bot token and the desired chat id in the [config file](./config.json). 
 
-    - In order to get the chat id for the bot itself, open the following URL in a brower
+    - In order to get the chat id for the bot itself, open the following URL in a browser:
         ```
         https://api.telegram.org/bot{our_bot_token}/getUpdates
         ```
-    - Look for the message with the text `/start`. In this message under `chat` we can find our `id`
+    - Look for the message with the text `/start`. In this message, under `chat` we can find our `id`
 
 ## Optional: create alias
-This repo contains a bash script that automatically create an alias under `py-notify`. Just execute the following command:
+This repo contains a bash script that automatically creates an alias under `py-notify`. Just execute the following command:
 
 ```
 ./create_alias.sh
